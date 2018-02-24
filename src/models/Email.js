@@ -6,7 +6,7 @@ let counter = 0;
 let transporter = nodemailer.createTransport(smtpTransport({
     service: 'gmail',
     auth: {
-        user: 'spravka.student@gmail.com',
+        user: 'medspravki.vsem@gmail.com',
         pass: 'forspravka1'
     }
 }));
@@ -17,8 +17,8 @@ let mailOptions =  (data)=> {
     let nowform = dateformate(now, "dd.mm.yy HH:MM");
 
     return {
-    from: 'spravka.student@gmail.com',
-    to: 'spravka.student@gmail.com',
+    from: 'medspravki.vsem@gmail.com',
+    to: 'medspravki.vsem@gmail.com',
     subject: `Заказ от ${nowform}`,
     text: `
     Имя: ${data.fields.name} \n
