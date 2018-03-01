@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
         $('body,html').animate({scrollTop: top1}, 600);
 	});
     $("#submit").on("click", ()=>{
-    	let val1 = $('input[type=\'text\']');
+    	let val1 = $('#subbut');
         let val2 = $('input[type=\'tel\']');
         console.log(val1.val() + "" + val2.val());
         if (val1.val() === ""){
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     $("#submit").click(()=> {
-        let name = $('input[type=\'text\']').val();
+        let name = $('#subbut').val();
         let tel = $('input[type=\'tel\']').val();
         let call = document.querySelector("input[id='1']").hasAttribute('checked');
         let whats = document.querySelector("input[id='2']").hasAttribute('checked');
@@ -213,6 +213,21 @@ document.addEventListener('DOMContentLoaded', function() {
             $('#success').css("display", "block").animate({opacity: 0.95}, 800);
         }
 
+    });
+    $("#refbut").click(()=> {
+        let name = $('#refname').val();
+            $.ajax({
+                type: 'POST',
+                url: '/setitem',
+                data: {name: name},
+                dataType: "json",
+                success: function (data) {
+
+                }
+            });
+        $('#refname').css("display", "none").animate({opacity: 0}, 800);
+        $('#refbut').css("display", "none").animate({opacity: 0}, 800);
+        $('#succesref').css("display", "block").animate({opacity: 0.95}, 800)
     });
     $("label[for='1']").click(()=> {
         if (document.querySelector("input[id='2']").hasAttribute('checked')){

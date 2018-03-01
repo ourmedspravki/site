@@ -9,8 +9,9 @@ const body = require('async-busboy');
 const city = require('./city.json');
 let gorodd = "";
 const Email = require(__dirname + '/src/models/Email');
-
+const referal = require(__dirname + '/src/models/referal');
 const renderHTML = require(__dirname + '/views/index.js');
+const renderAdmin = require(__dirname + '/views/admin.js');
 const app = new koa();
 
 app.use(router.routes());
@@ -21,6 +22,11 @@ router.get('/', async (ctx)=>{
     gorodd = "";
     ctx.body = await renderHTML(gorodd);
 });
+
+router.get('/admin', async (ctx)=>{
+    ctx.body = await renderAdmin();
+});
+
 router.get('/:city', async (ctx)=>{
     gorodd = city[ctx.params.city];
     if (gorodd !== undefined) {
@@ -37,6 +43,34 @@ router.post('/', async (ctx)=>{
     ctx.body = 'ok';
 });
 
-app.listen(8080, ()=>{
+router.post('/indefication', async (ctx)=>{
+    const data = await body(ctx.req);
+    console.log(data.fields.pass);
+    if (data.fields.pass === "123qwe456rty"){
+        ctx.body = "ok";
+    } else {
+        ctx.body = "e"
+    }
+});
+
+router.post('/getitem', async (ctx)=>{
+    const data = await body(ctx.req);
+    let re = referal.getItem(data.fields.name);
+    ctx.body = re;
+});
+
+router.post('/setitem', async (ctx)=>{
+    const data = await body(ctx.req);
+    referal.setItem(data.fields.name);
+    ctx.body = 'ok';
+});
+
+router.post('/updateitem', async (ctx)=>{
+    const data = await body(ctx.req);
+    referal.updateItem(data.fields.name);
+    ctx.body = 'ok';
+});
+
+app.listen(8090, ()=>{
     console.log('Стартануло')
 });

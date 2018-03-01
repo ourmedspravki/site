@@ -23,12 +23,39 @@ module.exports = (gorod)=> {
 	<link href="/stylesheets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 	<script type="text/javascript" src="javascripts/bundle.js"></script>
 	<script type="text/javascript" src="//vk.com/js/api/openapi.js?150"></script>
-	<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter46677963 = new Ya.Metrika({ id:46677963, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/46677963" style="position:absolute; 
-	left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
-	<meta name="yandex-verification" content="ddb0b99340948576" />
-	<script type="text/javascript">
-	VK.init({apiId: 6261211, onlyWidgets: true});
-	</script>
+  <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter47882636 = new Ya.Metrika({
+                    id:47882636,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/47882636" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+  <script type="text/javascript" src="//vk.com/js/api/openapi.js?152"></script>
+
+<script type="text/javascript">
+  VK.init({apiId: 6391414, onlyWidgets: true});
+</script>
 </head>
 <body>
 		<header id="menu-list">
@@ -39,7 +66,7 @@ module.exports = (gorod)=> {
 					<li><a href="#section-3">Справки</a></li>
 					<li><a href="#section-4">Отзывы</a></li>
 					<li id="header_tel">+7-916-322-05-85</li>
-							
+
 				</ul>
 			</div>
 		</header>
@@ -89,7 +116,7 @@ module.exports = (gorod)=> {
 				        </div>
 				        <div class="description" id="desc_1">
 				            <h1>Пропуск до двух недель</h1>
-				            <p>Медсправка формы <b>095/у</b> выдается 
+				            <p>Медсправка формы <b>095/у</b> выдается
 				            врачом-терапевтом или врачом-педиатром и освобождает
 				             от посещения занятий на срок до
 				              14 календарных дней</p>
@@ -106,7 +133,7 @@ module.exports = (gorod)=> {
 				        <div class="description" id="desc_2">
 				            <h1>Пропуск от двух недель</h1>
 				            <p>Выписка из истории болезни <b>027/у</b>. Освобождает от
-				             посещения занятий на всё время болезни, 
+				             посещения занятий на всё время болезни,
 				             может быть выписана на срок более 14 дней</p>
 				        </div>
                     </div>
@@ -144,11 +171,12 @@ module.exports = (gorod)=> {
 			<section id="referal">
 			    <article>
 			        <h1>Хочешь получить медсправку бесплатно?</h1>
-			        <p><b>Приведи 2 друзей</b>, которые купят у нас справку, они получат медсправку с 10% скидкой, а ты получишь любую медсправку бесплатно. 
+			        <p><b>Приведи 2 друзей</b>, которые закажут справку у нас, они получат 10% скидку, а ты получишь любую медсправку бесплатно.
 			        Введи своё имя, оно и будет <b>кодовой фразой</b> которую твои друзья должны будут назвать для получения скидки.</p>
 			        <span>
-			        <input type='text' placeholder="Ф.И.О">
-			        <div>Отправить</div>
+			        <div id="succesref">Отлично! Осталось позвать друзей.</div>
+			        <input id="refname" type='text' placeholder="Ф.И.О">
+			        <div id="refbut">Отправить</div>
 			        </span>
 			    </article>
 			</section>
@@ -158,18 +186,18 @@ module.exports = (gorod)=> {
 			</section>
 			</section>
 			<div id="vk">
-			
-			<div id="vk_comments"></div>
-				<script type="text/javascript">
-				VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"}, "const");
-				</script>
+
+      <div id="vk_comments"></div>
+          <script type="text/javascript">
+            VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
+          </script>
 				 <footer>
-				 <div id="site_name">© medspravki-vsem 2008-2017</div>
+				 <div id="site_name">© medspravka-vsem.ru 2008-2018</div>
 				 <div id="foot_number">+7-916-322-05-85</div>
                 </footer>
             </div>
             <div class="slicer slice"></div>
-        </div> 
+        </div>
         <div id="call"><a id="a" href=tel:+79163220585></a><p>+7-916-322-05-85<p></div>
         <div id='outplane'></div>
 
@@ -187,49 +215,49 @@ module.exports = (gorod)=> {
             		<p><b>Медицинская справка 095</b> у - это официальный документ, подтверждающий,
             		что учащийся или студент временно не способен проходить обучение в школе
             		или вузе по врачебным показаниям.
-            		Стандартная форма справки выдается педиатром или терапевтом в 
+            		Стандартная форма справки выдается педиатром или терапевтом в
             		районной поликлинике.</p>
             	</div>
             	<div id="desc_desc_027" class="desc_desc_div">
             		<h1>Справка 027/у</h1>
             		<p>
-            		<b>Справка 027/у</b> — это выписка из амбулатороной карты больного 
-            		или из больничной карты (выписной эпикриз). <br>Требуется такая медицинская справка 
-            		для освобождения от занятий до 45 календарных дней для 
+            		<b>Справка 027/у</b> — это выписка из амбулатороной карты больного
+            		или из больничной карты (выписной эпикриз). <br>Требуется такая медицинская справка
+            		для освобождения от занятий до 45 календарных дней для
             		учащихся и студентов высших и средних учебных заведений.</p>
             	</div>
             	<div id="desc_desc_kek" class="desc_desc_div">
             		<h1>Справка КЭК</h1>
             		<p>
-            		<b>Клинико-экспертная комиссия (КЭК)</b>, 
+            		<b>Клинико-экспертная комиссия (КЭК)</b>,
             		состоящая из коллегии врачей, принимает
-            		решения по частным медицинским случаям. 
-            		Эти решения оформляются в виде протокола заключения КЭК. 
-            		Такое заключение позволяет продлить 
-            		лечение на более длительный срок, 
+            		решения по частным медицинским случаям.
+            		Эти решения оформляются в виде протокола заключения КЭК.
+            		Такое заключение позволяет продлить
+            		лечение на более длительный срок,
             		взять академ в ВУЗе, освободить от физ-ры на длительный срок.
             	</div>
             	<div id="desc_desc_academ" class="desc_desc_div">
             		<h1>Академический отпуск</h1>
             		<p>
-            		<b>Академический отпуск</b> предоставляется студенту на основании 
+            		<b>Академический отпуск</b> предоставляется студенту на основании
             		трех медицинских справкок: <b>095/у</b> (документ, подтверждающий временную нетрудоспособность)
             		+ <b>027/y</b><br> (выписка из истории болезни)
             		+ <b>КЭК</b> (протокол заключения клинико-экспертной комиссии) </p>
             	</div>
                 <div class="email_button"><div id="outline-wrapper"></div><span>Заказать звонок</span></div>
             </div>
-            
+
         </div>
-        
+
 		<div id='blank'>
 		    <form>
-		    <div id="success"><img src="../img/checked.png"><p>Наш специалист свяжется 
+		    <div id="success"><img src="../img/checked.png"><p>Наш специалист свяжется
 		    с Вами в ближайшее время</p></div>
 		    <div id="close_modal"></div>
 		    <p>Наш специалист свяжется<br id='br'> с Вами</p>
 		        <div class="group">
-		            <input type="text" name="text" required>
+		            <input id="subbut" type="text" name="text" required>
 		            <span class="bar"></span>
 		            <label>Имя</label>
 		        </div>
@@ -247,14 +275,14 @@ module.exports = (gorod)=> {
                     <input id="2" type="radio" name="g">
                     <label for="2">WatsApp</label>
                  </div>
-                 <div id="submit">Отправить</div>  
-                      
+                 <div id="submit">Отправить</div>
+
             </form>
-            
+
         </div>
-         
+
 </body>
 </html>
-         
+
     `)
 };

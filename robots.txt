@@ -7,9 +7,9 @@ Disallow: /wp-feed
 Disallow: /wp-content/plugins
 Disallow: /wp-content/cache
 Disallow: /wp-content/themes
-Host: medspravki-vsem.ru
+Host: medspravka-vsem.ru
 
-Sitemap: http://medspravki-vsem.ru/sitemap.xml
+Sitemap: http://medspravka-vsem.ru/sitemap.xml
 
 User-agent: Googlebot-Image
 Allow: /wp-content/uploads/

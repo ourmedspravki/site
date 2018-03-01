@@ -688,8 +688,20 @@ body{
 	vertical-align: top;
 	text-align: center;
 	font-family: "HelveticaNeueCyr-Light", serif;
+	cursor: pointer;
 }
-
+#referal span>#succesref{
+	width: 100%;
+	background-color: #f8f8f2;
+	border: 1px solid #20303c;
+	color: #20303c;
+	cursor: default;
+	border-radius: 20px 20px 20px 20px;
+	display: none;
+	font-size: 24px;
+	text-align: center;
+	line-height: 46px;
+}
 #section-4{
 	width: 100%;
 	height: 180px;
@@ -1322,18 +1334,30 @@ form p{
 		top: 7px;
 	}
 	#referal{
-		height: 865px;
+		height: 855px;
+		border-top: none;
+		background-color: #20303c;
+
 	}
 	#referal article{
 		width: 100%;
 		height: 1000px;
 		top: 500px;
+		border-radius: 10px 10px 0 0;
 	}
 	#referal span{
 		width: 90%;
 	}
-	#referal h1{
+	#referal>article h1{
 		width: 90%;
+		font-family: "Courier New";
+		line-height: 30px;
+		margin-left: 5%;
+		font-size: 26px;
+		letter-spacing: 1.2px;
+	}
+	#referal>article p {
+		text-align: left;
 	}
 	#referal span input{
 		width: 100%;
@@ -1343,9 +1367,26 @@ form p{
 		display: block;
 		border-radius: 0;
 		position: relative;
+		width: 100%;
+		line-height: 50px;
 		left: 50%;
-		margin-top: 30px;
+		margin-top: 20px;
 		transform: translate(-50%);
+	}
+
+	#referal span>#succesref{
+		padding-top: 22px;
+		background-color: #f8f8f2;
+		border: 1px solid #20303c;
+		color: #20303c;
+		width: 100%;
+		height: 80px;
+		cursor: default;
+		border-radius: 0px 0px 0px 0px;
+		display: none;
+		font-size: 22px;
+		text-align: center;
+		line-height: 22px;
 	}
 	.spravka{
 		display: block;
