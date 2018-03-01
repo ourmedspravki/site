@@ -1,5 +1,5 @@
-import nodemailer from 'nodemailer';
-import dateformate from 'dateformat';
+const nodemailer = require('nodemailer');
+const dateformate = require('dateformat');
 let smtpTransport = require('nodemailer-smtp-transport');
 let fs = require('fs');
 let counter = 0;
