@@ -71,6 +71,6 @@ router.post('/updateitem', async (ctx)=>{
     ctx.body = 'ok';
 });
 
-app.listen(8090, ()=>{
+app.listen(80, ()=>{
     console.log('Стартануло')
 });
