@@ -15,7 +15,7 @@ module.exports = (gorod)=> {
 
 	<meta charset="UTF-8">
 	<meta name=viewport content="width=device-width, initial-scale=1">
-	<meta name="yandex-verification" content="be682973d82f62e2" />
+	<meta name="yandex-verification" content="560bc744034501a2" />
 	<meta name="keywords" content="справка, медсправка, купить, медицинская, физкультура, физкультуры, освобождение, мед, физ-ра, физра, прогул, пропуск, институт, 027, 095у, 095, 027у">
 	<meta name="description" content="Работаем 7 лет. Поможем, расскажем, оформим. 8-916-322-05-85">
 	<title>Купить медсправку ${gorod}</title>
