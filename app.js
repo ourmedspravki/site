@@ -17,7 +17,13 @@ const app = new koa();
 let parser = new xml2js.Parser();
 const sitemap = '';
 fs.readFile('./public/sitemap.xml', (err, data)=>{
+    if(err){
+    console.log('err')
+    }
     parser.parseString(data, (err, result)=>{
+    if(err){
+    console.log('err2')
+    }
         sitemap = result;
     })
 })
