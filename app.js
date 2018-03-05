@@ -45,7 +45,7 @@ router.get('/admin', async (ctx)=>{
 router.get('/sitemap.xml', async (ctx)=>{
     ctx.set('Content-Type', 'application/xml');
     ctx.type = 'application/xml';
-    ctx.body = '' + sitemap.toString();
+    ctx.body = '' + sitemap;
 });
 
 router.get('/:city', async (ctx)=>{
