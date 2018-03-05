@@ -14,17 +14,15 @@ const referal = require(__dirname + '/src/models/referal');
 const renderHTML = require(__dirname + '/views/index.js');
 const renderAdmin = require(__dirname + '/views/admin.js');
 const app = new koa();
-let parser = new xml2js.Parser({
-  tagNameProcessors: [processors.stripPrefix]
-});
+let parser = new xml2js.Parser();
 const sitemap = '';
 fs.readFile('./public/sitemap.xml', (err, data)=>{
     if(err){
-    console.log('err')
+    console.log(err)
     }
     parser.parseString(data, (err, result)=>{
     if(err){
-    console.log('err2')
+    console.log(err)
     }
         sitemap = result;
     })
