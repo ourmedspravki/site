@@ -16,6 +16,7 @@ const renderAdmin = require(__dirname + '/views/admin.js');
 const app = new koa();
 let parser = new xml2js.Parser();
 let sitemap = '';
+let robots = '';
 fs.readFile('./public/sitemap.xml', (err, data)=>{
     if(err){
     console.log(err)
@@ -26,7 +27,10 @@ fs.readFile('./public/sitemap.xml', (err, data)=>{
     }
         sitemap = result;
     })
-})
+});
+fs.readFile('./public/robots.txt', (err, data)=>{
+    robots = data;
+});
 
 
 app.use(router.routes());
@@ -49,7 +53,7 @@ router.get('/sitemap.xml', async (ctx)=>{
 });
 
 router.get('/robots.txt', async (ctx)=>{
-    ctx.body = require('./public/robots.txt');
+    ctx.body = robots;
 });
 
 router.get('/:city', async (ctx)=>{
