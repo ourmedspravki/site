@@ -27,6 +27,10 @@ router.get('/admin', async (ctx)=>{
     ctx.body = await renderAdmin();
 });
 
+router.get('/sitema.xml', async (ctx)=>{
+    ctx.body = require('./public/sitemap.xml');
+});
+
 router.get('/:city', async (ctx)=>{
     gorodd = city[ctx.params.city];
     if (gorodd !== undefined) {
