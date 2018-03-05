@@ -28,7 +28,6 @@ router.get('/admin', async (ctx)=>{
 });
 
 router.get('/sitemap.xml', async (ctx)=>{
-    ctx.response.header({'Content-Type': 'application/xml'});
     ctx.body = require('./public/sitemap.xml').toString();
 });
 
