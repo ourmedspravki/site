@@ -17,6 +17,7 @@ const app = new koa();
 let parser = new xml2js.Parser();
 let sitemap = '';
 let robots = '';
+let favicon = '';
 fs.readFile('./public/sitemap.xml', (err, data)=>{
     if(err){
     console.log(err)
@@ -31,7 +32,9 @@ fs.readFile('./public/sitemap.xml', (err, data)=>{
 fs.readFile('./public/robots.txt', (err, data)=>{
     robots = data;
 });
-
+fs.readFile('./public/favicon.ico', (err, data)=>{
+    favicon = data;
+});
 
 app.use(router.routes());
 app.use(serve(__dirname + '/public'));
@@ -60,8 +63,8 @@ router.get('/:city', async (ctx)=>{
     gorodd = city[ctx.params.city];
     if (gorodd !== undefined) {
         ctx.body = await renderHTML(gorodd);
-    } else  if (gorodd == 'favicon.ico'){
-        
+    } else  if (gorodd === 'favicon.ico'){
+        ctx.body = favicon;
     } else {
         ctx.status = 404;
         ctx.body = "<h1>Not found</h1>"
