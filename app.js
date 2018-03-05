@@ -15,7 +15,7 @@ const renderHTML = require(__dirname + '/views/index.js');
 const renderAdmin = require(__dirname + '/views/admin.js');
 const app = new koa();
 let parser = new xml2js.Parser();
-const sitemap = '';
+let sitemap = '';
 fs.readFile('./public/sitemap.xml', (err, data)=>{
     if(err){
     console.log(err)
