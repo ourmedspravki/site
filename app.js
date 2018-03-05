@@ -48,6 +48,10 @@ router.get('/sitemap.xml', async (ctx)=>{
     ctx.body = sitemap;
 });
 
+router.get('/robots.txt', async (ctx)=>{
+    ctx.body = require(./public/robots.txt);
+});
+
 router.get('/:city', async (ctx)=>{
     gorodd = city[ctx.params.city];
     if (gorodd !== undefined) {
