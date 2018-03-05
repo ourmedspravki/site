@@ -56,6 +56,8 @@ router.get('/sitemap.xml', async (ctx)=>{
 });
 
 router.get('/robots.txt', async (ctx)=>{
+    ctx.set('Content-Type', 'text/plain');
+    ctx.type = 'text/plain';
     ctx.body = robots;
 });
 
