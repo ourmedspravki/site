@@ -1,6 +1,6 @@
 const ReactDom = require('react-dom/server');
 const fs = require('fs');
-const xml2js = require 'xml2js';
+const xml2js = require('xml2js');
 const koa = require('koa');
 const router = require('koa-router')();
 const serve = require('koa-static');
