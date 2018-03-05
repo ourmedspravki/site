@@ -49,7 +49,7 @@ router.get('/admin', async (ctx)=>{
 router.get('/sitemap.xml', async (ctx)=>{
     ctx.set('Content-Type', 'application/xml');
     ctx.type = 'application/xml';
-    ctx.res = sitemap;
+    ctx.body = sitemap;
 });
 
 router.get('/robots.txt', async (ctx)=>{
