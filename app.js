@@ -14,7 +14,9 @@ const referal = require(__dirname + '/src/models/referal');
 const renderHTML = require(__dirname + '/views/index.js');
 const renderAdmin = require(__dirname + '/views/admin.js');
 const app = new koa();
-let parser = new xml2js.Parser();
+let parser = new xml2js.Parser({
+  tagNameProcessors: [processors.stripPrefix]
+});
 const sitemap = '';
 fs.readFile('./public/sitemap.xml', (err, data)=>{
     if(err){
