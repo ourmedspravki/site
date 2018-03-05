@@ -29,7 +29,7 @@ router.get('/admin', async (ctx)=>{
 
 router.get('/sitemap.xml', async (ctx)=>{
     ctx.set('Content-Type', 'application/xml');
-    ctx.body = require('./public/sitemap.xml');
+    ctx.body = '' + require('./public/sitemap.xml');
 });
 
 router.get('/:city', async (ctx)=>{
