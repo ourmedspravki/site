@@ -28,7 +28,7 @@ router.get('/admin', async (ctx)=>{
 });
 
 router.get('/sitema.xml', async (ctx)=>{
-    ctx.body = require('./public/sitemap.xml');
+    ctx.body = require('./public/sitemap.xml').toString();
 });
 
 router.get('/:city', async (ctx)=>{
