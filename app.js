@@ -60,6 +60,8 @@ router.get('/:city', async (ctx)=>{
     gorodd = city[ctx.params.city];
     if (gorodd !== undefined) {
         ctx.body = await renderHTML(gorodd);
+    } else  if (gorodd == 'favicon.ico'){
+        
     } else {
         ctx.status = 404;
         ctx.body = "<h1>Not found</h1>"
