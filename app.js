@@ -1,5 +1,6 @@
 const ReactDom = require('react-dom/server');
 const fs = require('fs');
+const xml2js = require 'xml2js';
 const koa = require('koa');
 const router = require('koa-router')();
 const serve = require('koa-static');
@@ -13,7 +14,14 @@ const referal = require(__dirname + '/src/models/referal');
 const renderHTML = require(__dirname + '/views/index.js');
 const renderAdmin = require(__dirname + '/views/admin.js');
 const app = new koa();
-const sitemap = require('./public/sitemap.xml');
+let parser = new xml2js.Parser();
+const sitemap = '';
+fs.readFile('./public/sitemap.xml', (err, data)=>{
+    parser.parseString(data, (err, result)=>{
+        sitemap = result;
+    })
+})
+
 
 app.use(router.routes());
 app.use(serve(__dirname + '/public'));
