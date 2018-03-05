@@ -13,6 +13,7 @@ const referal = require(__dirname + '/src/models/referal');
 const renderHTML = require(__dirname + '/views/index.js');
 const renderAdmin = require(__dirname + '/views/admin.js');
 const app = new koa();
+const sitemap = require('./public/sitemap.xml');
 
 app.use(router.routes());
 app.use(serve(__dirname + '/public'));
@@ -29,7 +30,8 @@ router.get('/admin', async (ctx)=>{
 
 router.get('/sitemap.xml', async (ctx)=>{
     ctx.set('Content-Type', 'application/xml');
-    ctx.body = '' + require('./public/sitemap.xml');
+    ctx.type = 'application/xml';
+    ctx.body = '' + sitemap.toString();
 });
 
 router.get('/:city', async (ctx)=>{
