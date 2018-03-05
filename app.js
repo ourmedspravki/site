@@ -63,7 +63,7 @@ router.get('/:city', async (ctx)=>{
     gorodd = city[ctx.params.city];
     if (gorodd !== undefined) {
         ctx.body = await renderHTML(gorodd);
-    } else  if (gorodd.indexOf('favicon') > -1){
+    } else  if (ctx.params.city.indexOf('favicon') > -1){
         ctx.body = favicon;
     } else {
         ctx.status = 404;
