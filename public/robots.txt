@@ -1,19 +1,5 @@
 User-agent: Yandex
-Disallow: /tver
-Disallow: /pskov
-Disallow: /bryansk
-Disallow: /saratov
-Disallow: /samara
-Disallow: /voronezh
-Disallow: /moscow
-Disallow: /novgorod
-Disallow: /ryazan
-Disallow: /tula
-Disallow: /kaluga
-Disallow: /krasnodar
-Disallow: /rostov
-Disallow: /
-Disallow: /volgograd
+
 Host: medspravka-vsem.ru
 
 Sitemap: http://medspravka-vsem.ru/sitemap.xml
