@@ -1,18 +1,19 @@
-User-agent: Mediapartners-Google
-Disallow:
-
-User-agent: *
-Disallow: /wp-includes
-Disallow: /wp-feed
-Disallow: /wp-content/plugins
-Disallow: /wp-content/cache
-Disallow: /wp-content/themes
+User-agent: Yandex
+Disallow: /tver
+Disallow: /pskov
+Disallow: /bryansk
+Disallow: /saratov
+Disallow: /samara
+Disallow: /voronezh
+Disallow: /moscow
+Disallow: /novgorod
+Disallow: /ryazan
+Disallow: /tula
+Disallow: /kaluga
+Disallow: /krasnodar
+Disallow: /rostov
+Disallow: /
+Disallow: /volgograd
 Host: medspravka-vsem.ru
 
 Sitemap: http://medspravka-vsem.ru/sitemap.xml
-
-User-agent: Googlebot-Image
-Allow: /wp-content/uploads/
-
-User-agent: YandexImages
-Allow: /wp-content/uploads/
