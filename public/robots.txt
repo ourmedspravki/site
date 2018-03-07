@@ -1,5 +1,5 @@
 User-agent: Yandex
-Allow: /favicon.png
+Allow: /
 Host: medspravka-vsem.ru
 
 Sitemap: http://medspravka-vsem.ru/sitemap.xml
