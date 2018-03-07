@@ -4,14 +4,14 @@ module.exports = (gorod)=> {
 <html lang="en">
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109838504-1"></script>
-	<script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115303051-1"></script>
+<script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-109838504-1');
-	</script>
+  gtag('config', 'UA-115303051-1');
+</script>
 
 	<meta charset="UTF-8">
 	<meta name=viewport content="width=device-width, initial-scale=1">
