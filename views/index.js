@@ -20,7 +20,7 @@ module.exports = (gorod)=> {
 	<meta name="description" content="Работаем 7 лет. Поможем, расскажем, оформим. 8-916-322-05-85">
 	<title>Купить медсправку ${gorod}</title>
 	<link rel="stylesheet" type="text/css" href="/stylesheets/bundle.css">
-	<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<link href="/favicon.png" rel="shortcut icon" type="image/x-icon" />
 	<script type="text/javascript" src="javascripts/bundle.js"></script>
 	<script type="text/javascript" src="//vk.com/js/api/openapi.js?150"></script>
   <!-- Yandex.Metrika counter -->
