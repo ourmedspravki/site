@@ -190,7 +190,7 @@ module.exports = (gorod)=> {
 
       <div id="vk_comments"></div>
           <script type="text/javascript">
-            VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
+            VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*", pageUrl: "medspravka-vsem.ru"});
           </script>
 				 <footer>
 				 <div id="site_name">© medspravka-vsem.ru 2008-2018</div>
