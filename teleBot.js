@@ -38,6 +38,7 @@ async function start (words, Group) {
     }
   })
   for (let j = 0; j < groups.length; j++) {
+    console.log(groups.length);
   request(groups[j].link, async function (error, response, body) {
     let $ = cheerio.load(body);
     let length = $('.pi_text').length;
