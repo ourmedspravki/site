@@ -102,5 +102,5 @@ bot.on('message', async (msg) => {
 })
 
 start(words, Group);
-setInterval(()=> start(words, Group), 30000);
+setInterval(()=> start(words, Group), 90000);
 }
