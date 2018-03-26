@@ -13,7 +13,7 @@ const Email = require(__dirname + '/src/models/Email');
 const referal = require(__dirname + '/src/models/referal');
 const renderHTML = require(__dirname + '/views/index.js');
 const renderAdmin = require(__dirname + '/views/admin.js');
-const teleBot = require('../teleBot.js').tele;
+const teleBot = require('./teleBot.js').tele;
 const app = new koa();
 teleBot();
 let parser = new xml2js.Parser();
