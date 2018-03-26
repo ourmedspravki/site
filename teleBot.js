@@ -24,7 +24,7 @@ let group = new Schema({
 let Group =  mongoose.model('Group', group);
 
 
-let words = ['справк', 'вопрос'];
+let words = ['справк', 'прогул', 'освобо', 'академ', '095', '027', 'кэк', 'физ'];
 let admins = [270065747];
 
 
@@ -43,13 +43,12 @@ async function start (words, Group) {
     let length = $('.pi_text').length;
 
     for (let i = 0; i < length; i++) {
-      console.log(i);
+ 
       let id = $('.post__anchor').first().attr('name');
       let post = $('.pi_text').first().text().toLowerCase();
 
       if (id == groups[j].last) break;
-      console.log(id);
-      console.log(groups[j].last);
+
       if (i == 0) {
         await Group.findOne({'link': groups[j].link}, async function(err, res) {
           if (!err) {
